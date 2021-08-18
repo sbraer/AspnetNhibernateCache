@@ -9,12 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NhibernateInstanceHelper", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{60291E69-A8CD-4248-A9A8-180611907772}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extra", "Extra", "{0A46B478-5EB3-417E-949B-4CF20D13810D}"
-	ProjectSection(SolutionItems) = preProject
-		Extra\Info.txt = Extra\Info.txt
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NhibernateApiRest", "NhibernateApiRest\NhibernateApiRest.csproj", "{8A262FF1-C691-4757-A7D6-167B7ED66DE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extra", "Extra", "{096479C4-4E2D-4EF0-AAE5-96151199E3FB}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
