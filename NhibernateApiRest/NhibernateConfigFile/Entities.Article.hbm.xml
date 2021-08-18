@@ -1,0 +1,24 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="Entities.Article, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Articles">
+    <cache region="redis" usage="read-only" />
+    <id name="Id" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <column name="Id" />
+      <generator class="identity" />
+    </id>
+    <property name="Name" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <column name="Name" length="100" index="ArticleName" not-null="true" />
+    </property>
+    <property name="Price" type="System.Decimal, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <column name="Price" not-null="true" />
+    </property>
+    <property name="Date" type="System.DateTime, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <column name="Date" not-null="true" />
+    </property>
+    <property name="Qty" type="System.Int64, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <column name="Qty" not-null="true" />
+    </property>
+    <property name="Description" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <column name="Description" length="200" />
+    </property>
+  </class>
+</hibernate-mapping>

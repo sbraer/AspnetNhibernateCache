@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentNHibernate" Version="3.1.0" />
+    <PackageReference Include="MySql.Data" Version="8.0.26" />
+    <PackageReference Include="NHibernate" Version="5.3.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\Nhibernate.Caches.Redis.Core\Nhibernate.Caches.Redis.Core.csproj" />
+  </ItemGroup>
+
+</Project>

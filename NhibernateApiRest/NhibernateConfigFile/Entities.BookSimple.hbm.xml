@@ -1,0 +1,12 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="Entities.BookSimple, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Books">
+    <cache region="redis" usage="read-only" />
+    <id name="Id" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <column name="Id" />
+      <generator class="identity" />
+    </id>
+    <property name="Title" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <column name="Title" length="100" index="BookTitle" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

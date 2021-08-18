@@ -1,0 +1,15 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="Entities.Author, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Authors">
+    <cache region="redis" usage="read-only" />
+    <id name="Id" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <column name="Id" />
+      <generator class="identity" />
+    </id>
+    <property name="Name" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <column name="Name" length="100" index="AuthorName" not-null="true" />
+    </property>
+    <property name="Sex" type="Entities.Sex, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <column name="Sex" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\Nhibernate.Caches.Redis.Core\Nhibernate.Caches.Redis.Core.csproj" />
+    <ProjectReference Include="..\NhibernateInstanceHelper\NhibernateInstanceHelper.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="NhibernateConfigFile\" />
+  </ItemGroup>
+
+
+</Project>

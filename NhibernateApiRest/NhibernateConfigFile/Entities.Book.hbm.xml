@@ -1,0 +1,30 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" polymorphism="explicit" name="Entities.Book, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Books">
+    <cache region="redis" usage="read-only" />
+    <id name="Id" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <column name="Id" />
+      <generator class="identity" />
+    </id>
+    <property name="Title" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <column name="Title" length="100" index="BookTitle" not-null="true" />
+    </property>
+    <property name="NumOfPages" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <column name="NumOfPages" not-null="true" />
+    </property>
+    <property name="Price" type="System.Decimal, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <column name="Price" not-null="true" />
+    </property>
+    <many-to-one class="Entities.Color, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CoverColor">
+      <column name="ColorId" not-null="true" />
+    </many-to-one>
+    <bag name="Authors" table="Books_Authors">
+      <cache region="redis" usage="read-write" />
+      <key>
+        <column name="BookId" />
+      </key>
+      <many-to-many class="Entities.Author, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <column name="AuthorId" />
+      </many-to-many>
+    </bag>
+  </class>
+</hibernate-mapping>
